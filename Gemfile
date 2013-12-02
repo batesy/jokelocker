@@ -46,4 +46,5 @@ end
 
 gem 'rails_12factor', group: :production
 gem 'foundation-rails'
+gem 'newrelic_rpm'
 ruby "2.0.0"
