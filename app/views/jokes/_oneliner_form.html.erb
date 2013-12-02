@@ -1,0 +1,10 @@
+<h2>Lay it on me:</h2>
+<%= form_for @joke do |f| %>
+  <h3 class="subheader">Set Up:</h3>
+  <%= f.text_field :title %>
+  <h3 class="punchline">Punchline:</h3>
+  <%= f.text_area :punchline %>
+  <%= f.hidden_field(:format, value: "oneliner") %>
+  <%= f.button %>
+  <%= link_to "<button>Cancel</button>".html_safe, root_path %>
+<% end %>

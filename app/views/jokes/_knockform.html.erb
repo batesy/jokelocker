@@ -1,0 +1,10 @@
+<%= form_for @joke do |f| %>
+  <h1>Knock Knock</h1>
+  <h2 class="subheader">who's there?</h2>
+  <%= f.text_field :title %>
+  <h2 class="subheader" id="who"><span id="knocksetup"> </span>who?</h2>
+  <%= f.text_field :punchline %>
+  <%= f.hidden_field(:format, value: "knock") %>
+  <%= f.button %>
+  <%= link_to "<button>Cancel</button>".html_safe, root_path %>
+<% end %>

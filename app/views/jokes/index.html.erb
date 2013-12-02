@@ -1,0 +1,18 @@
+<div class="row">  
+  <div class="small-12 columns" id="jokes_head">
+    <h1>Your Jokes</h1>
+  </div>
+</div>
+  <% @jokes.each do |joke| %>
+<div class="row">
+  <div class="small-12 columns">
+    <div class="panel"><%= link_to joke.title, "/jokes/#{joke.id}" %></div>
+  </div>
+</div>
+<% end %>
+<div class="row">
+  <div class="small-12 columns" id="index_buttons">
+    <%= link_to "<button>Add New Joke</button>".html_safe, new_joke_path %>
+    <%= link_to "<button>Main Menu</button>".html_safe, root_path %>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+// Place all the styles related to the jokes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#knockform{
+  display: none;
+  text-align: center;
+}
+
+#oneliner_form{
+  display: none;
+  text-align: center;
+}
+
+#jokes_head{
+  text-align: center;
+  padding-top: 10%;
+}
+
+#index_buttons{
+  text-align: center;
+}
+
+#add_buttons{
+  text-align: center;
+  padding-top: 10%;
+}
+
+#jokeprompt{
+  text-align: center;
+}
+
+.setup{
+  text-align: center;
+  padding-top: 10%;
+}
+
+.punchline{
+  text-align: center;
+}
+
+#show_buttons{
+  text-align: center;
+}
