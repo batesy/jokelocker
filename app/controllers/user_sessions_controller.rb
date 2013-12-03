@@ -14,6 +14,6 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to(:index, notice: 'Logged out!')
+    redirect_to(jokes_path, notice: 'Logged out!')
   end
 end
