@@ -12,7 +12,7 @@
 <% end %>
 <div class="row">
   <div class="small-12 columns" id="index_buttons">
-    <%= link_to "<button>Add New Joke</button>".html_safe, new_joke_path %>
-    <%= link_to "<button>Main Menu</button>".html_safe, root_path %>
+      <%= link_to "Add New Joke".html_safe, new_joke_path, class: "small button" %>
+      <%= link_to "Main Menu".html_safe, root_path, class: "small button" %>
   </div>
 </div>
