@@ -18,6 +18,21 @@
           <h1><%= link_to "JokeLocker", root_path %></h1>
         </li>
       </ul>
+
+      <section class="top-bar-section">
+        <% if current_user %>
+        <ul class="right">
+          <li class="has-dropdown">
+            <a href="#"><%= current_user.username %></a>
+            <ul class="dropdown">
+              <li>
+                <%= link_to "Logout", :logout, method: :post %>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <% end %>
+      </section>
     </nav>
     <%= yield %>
     <%= javascript_include_tag "application" %>
