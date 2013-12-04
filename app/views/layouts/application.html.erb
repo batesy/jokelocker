@@ -43,12 +43,6 @@
         <% end %>
       </section>
     </nav>
-    <% if flash.any? %>
-    <div data-alert class="alert-box">
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-    </div>
-    <% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

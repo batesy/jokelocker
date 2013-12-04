@@ -1,6 +1,10 @@
 class JokesController < ApplicationController
   def index
-    @jokes = Joke.all
+    if current_user
+      @jokes = Joke.all
+    else
+      redirect_to :root
+    end
   end
 
   def new

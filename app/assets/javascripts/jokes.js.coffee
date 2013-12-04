@@ -24,6 +24,3 @@
   $("#oneliner_form").slideDown();
 })`
 
-`$("#upvote").click(function(){
-
-});`
