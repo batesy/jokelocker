@@ -1,4 +1,5 @@
 class Joke < ActiveRecord::Base
-  has_many :jokecollections
-  has_many :users, through: :jokecollections
+  belongs_to :creator, :class_name => "User"
+  has_many :joke_collections
+  has_many :users, through: :joke_collections
 end

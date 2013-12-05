@@ -13,7 +13,10 @@ class JokesController < ApplicationController
 
   def create
     @joke = Joke.new(joke_params)
+    @joke.creator_id = current_user.id
     if @joke.save
+      # @joke.joke_collections.build (Why didn't this work?)
+      JokeCollection.create(user_id: current_user.id, joke_id: @joke.id)
       redirect_to jokes_path
     else
       render 'new'

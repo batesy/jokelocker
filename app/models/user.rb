@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :username, uniqueness: true
 
-  has_many :jokecollections
-  has_many :jokes, through: :jokecollections
+  has_many :joke_collections
+  has_many :jokes, through: :joke_collections
 end
