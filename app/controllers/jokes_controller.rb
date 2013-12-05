@@ -16,7 +16,8 @@ class JokesController < ApplicationController
     @joke.creator_id = current_user.id
     if @joke.save
       # @joke.joke_collections.build (Why didn't this work?)
-      JokeCollection.create(user_id: current_user.id, joke_id: @joke.id)
+      current_user.jokes << @joke
+      # JokeCollection.create(user_id: current_user.id, joke_id: @joke.id)
       redirect_to jokes_path
     else
       render 'new'
@@ -32,6 +33,12 @@ class JokesController < ApplicationController
     @joke.destroy
     JokeCollection.where(:joke_id => params[:id]).destroy_all
     redirect_to jokes_path
+  end
+
+  def add
+    @joke = Joke.find(params[:id])
+    current_user.jokes << @joke
+    redirect_to user_path(current_user)
   end
 
   private

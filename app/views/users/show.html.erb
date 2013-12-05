@@ -6,7 +6,7 @@
   <% @jokes.each do |joke| %>
 <div class="row">
   <div class="small-12 columns">
-    <div class="panel"><%= link_to Joke.find(joke.joke_id).title, "/jokes/#{joke.joke_id}" %></div>
+    <div class="panel"><%= link_to joke.title, "/jokes/#{joke.id}" %></div>
   </div>
 </div>
 <% end %>
