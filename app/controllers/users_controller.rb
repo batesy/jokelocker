@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @jokes = @user.joke_collections.all
   end
 
   def edit

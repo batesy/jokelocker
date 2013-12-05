@@ -23,7 +23,7 @@
         <% if current_user %>
         <ul class="right">
           <li class="has-dropdown">
-            <a href="#"><%= current_user.username %></a>
+            <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
             <ul class="dropdown">
               <li>
                 <%= link_to "Logout", :logout, method: :post %>

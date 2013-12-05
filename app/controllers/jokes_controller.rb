@@ -30,6 +30,7 @@ class JokesController < ApplicationController
   def destroy
     @joke = Joke.find(params[:id])
     @joke.destroy
+    JokeCollection.where(:joke_id => params[:id]).destroy_all
     redirect_to jokes_path
   end
 
