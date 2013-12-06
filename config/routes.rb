@@ -1,4 +1,6 @@
 Jokelocker3::Application.routes.draw do
+  get "oauths/oauth"
+  get "oauths/callback"
   root to: 'welcome#index'
 
   resources :jokes do
@@ -11,4 +13,8 @@ Jokelocker3::Application.routes.draw do
   get 'signup' => 'users#new', :as => :signup
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
+
+  get "oauth/callback" => "oauths#callback"
+  post "oauth/callback" => "oauths#callback"
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
 end

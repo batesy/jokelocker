@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  authenticates_with_sorcery!
+  authenticates_with_sorcery! do |config|
+    config.authentications_class = Authentication
+  end
 
   validates :password, length: { minimum: 3 }
   validates :password, confirmation: true
@@ -10,4 +12,7 @@ class User < ActiveRecord::Base
 
   has_many :joke_collections
   has_many :jokes, through: :joke_collections
+
+  has_many :authentications, :dependent => :destroy
+  accepts_nested_attributes_for :authentications
 end
