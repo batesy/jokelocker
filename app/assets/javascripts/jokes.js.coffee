@@ -24,3 +24,11 @@
   $("#oneliner_form").slideDown();
 })`
 
+`$(".panel").click(function(){
+  window.location=$(this).find("a").attr("href");
+  return false;
+})`
+
+`$(".panel").hover(function(){
+  $(this).css('cursor', 'pointer');
+})`
