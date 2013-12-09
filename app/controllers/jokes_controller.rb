@@ -41,6 +41,12 @@ class JokesController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def remove
+    @joke = Joke.find(params[:id])
+    current_user.joke_collections.find_by_joke_id(@joke.id).delete
+    redirect_to user_path(current_user)
+  end
+
   private
   def joke_params
     params.require(:joke).permit(:title, :punchline, :format)

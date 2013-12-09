@@ -5,6 +5,7 @@ Jokelocker3::Application.routes.draw do
 
   resources :jokes do
     post 'add', on: :member
+    delete 'remove', on: :member
   end
   resources :user_sessions
   resources :users
