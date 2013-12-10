@@ -38,6 +38,13 @@
   </div>
 <% end %>
 
+<div class="row submitted_by">
+  <div id="small-12 columns">
+    <% if @joke.creator_id? %>
+    <h6>Submitted by: <%= User.find(@joke.creator_id).username %></h6>
+    <% end %>
+  </div>
+
 <div class="row">
     <div class="small-12 columns" id="show_buttons">
       <%= link_to "Back to Jokes", jokes_path, class: "small button" %>
