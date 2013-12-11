@@ -6,5 +6,5 @@ class JokeCollectionController < ApplicationController
 
   end
 
-  #
+  
 end

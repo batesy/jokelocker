@@ -27,8 +27,24 @@
 `$(".panel").click(function(){
   window.location=$(this).find("a").attr("href");
   return false;
-})`
+})` 
 
 `$(".panel").hover(function(){
   $(this).css('cursor', 'pointer');
 })`
+
+`$(".setup").fadeIn();`
+
+`$(".punchline").fadeIn(1000);`
+
+`$(".submitted_by").fadeIn(1500);`
+
+`$(".knock").fadeIn();`
+
+`$(".whosthere").fadeIn(600);`
+
+`$(".knock-setup").fadeIn(800);`
+
+`$(".knock-who").fadeIn(1000);`
+  
+`$(".knockpunch").fadeIn(1200);`

@@ -34,10 +34,12 @@
 .setup{
   text-align: center;
   padding-top: 10%;
+  display: none;
 }
 
 .punchline{
   text-align: center;
+  display: none;
 }
 
 #show_buttons{
@@ -46,4 +48,13 @@
 
 .submitted_by{
   text-align: center;
+  display: none;
+}
+
+.knockknock{
+  text-align: center;
+}
+
+.knock, .whosthere, .knock-setup, .knock-who, .knockpunch{
+  display: none;
 }
